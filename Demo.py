@@ -8,7 +8,7 @@ print("*Deepa*" * 10)
 print("Gnana" + "Deepa" )
 print('''THIS IS 
 MULTIline string with 3 quotes. 
-without giving escape charater.''')
+without giving escape character.''')
 
 #\a makes a sound
 print('\a')
@@ -23,9 +23,17 @@ print("hello","world",sep='_',end="\t")
 print("End argument used with tab escape character instead of new line")
 
 ##### Testing code snippets ##########
-x = input("Enter a number: ")  # Taking input from user
-y = input("Enter another number: ")  # Taking input from user
-print(type(x), type(y)) # By default input is string
-print(x+y)  # Concatenation of strings
-x = int(x)  # Type casting to integer
-print(x+5)
+x = 123  # global variable
+
+def display():
+    print("Inside display function")
+   # print("X before local variable declaration x:",x)  # accesses global x
+    x = 98  # local variable
+    print("X after local variable declaration x:",x)   # accesses local x
+    print(globals()['x'])  # accesses global x
+
+print(x) 
+
+a = display  # assign function to a variable
+a()  # call function
+print(x)
