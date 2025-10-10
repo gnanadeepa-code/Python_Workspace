@@ -63,7 +63,7 @@ n = int(input())
 for i in range(1,11):
     print(n*i,end=' ') 
 
-                       """
+                       
 
 class Solution:
     # Function to calculate factorial of a number.
@@ -77,4 +77,20 @@ class Solution:
         return tot
 
 ob = Solution()
-print(ob.factorial(5))
+print(ob.factorial(5))    """
+
+# Your code here
+def printStar(n):
+    for i in range(1,n+1):
+       # print("inside for i:",i)
+        if(i==1 or i==n):
+           # print("inside if i:",i)
+            print("* " * n)
+        else:
+           # print("inside else i:",i)
+            print("* " +"  " * (n-2) + "*")
+
+printStar(5)
+
+
+    
